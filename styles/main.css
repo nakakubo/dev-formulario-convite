@@ -1,21 +1,21 @@
 #app {
 	display: grid;
+	overflow: hidden;
 	grid-template-columns: 33% 67%;
 	height: 100vh;
-	overflow: hidden;
-	max-width: 77.5rem;
-	margin: 1.25rem auto;
+	max-width: 80rem;
+	margin: 0 auto;
 	gap:1.25rem;
 }
 
 main {
 	overflow: auto;
-	padding-block: 80px;
-	border-radius: .75rem;
-	background-color: var(--shape-body);
+	margin-right: 1.25rem;
 	& .main-container {
-		max-width: 35rem;
-		margin:auto;
+		margin: 1.25rem 1.25rem 1.25rem 0;
+		padding: 5rem 8.125rem;
+		border-radius: .75rem;
+		background-color: var(--shape-body);
 	}
 }
 
@@ -24,8 +24,39 @@ aside {
 	background-image: url("../assets/images/Background.png");
 	background-repeat: no-repeat;
 	background-size: cover;
+	margin-top:1.25rem;
+	margin-left: 1.25rem;
 	padding: 1.875rem;
 	border-radius: .75rem;
 	max-height: 45.5rem;
-	
+	& .aside-container img {
+		width: 45px;
+	}
+}
+
+/* Ulitities */
+.flex {
+	display: flex;
+}
+
+.flex-1 {
+	display: flex;
+	flex: 1;
+}
+
+.flex-2 {
+	display: flex;
+	flex:2;
+}
+
+.grid {
+	display: grid;
+}
+
+.gap-1 {
+	gap: 1rem;
+}
+
+.center {
+	align-items: center;
 }

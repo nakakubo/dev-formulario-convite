@@ -28,23 +28,222 @@
 			<div class="main-container">
 				<h2>Crie seu convite</h2>
 				<form method="post" enctype="multipart/form-data">
-					<fieldset class="about">
-						<legend>Sobre o evento</legend>
+					<fieldset class="about-event">
+						<div class="title-form flex">
+							<img src="assets/icons/calendar.svg" alt="ícone calendário">
+							<legend>Sobre o evento</legend>
+						</div>
 						<div class="input-wrapper">
 							<label for="title">Título</label>
 							<input id="title" type="text" placeholder="Nome do evento" name="title">
-							<div>
-								<div>
-									<label for="start">Início</label>
-									<input id="start" type="text" placeholder="DD/MM/AAAA, --:--" name="start">
+						</div>
+						<div class="flex gap-1">
+							<div class="input-wrapper flex-1">
+								<label for="start">Início</label>
+								<input id="start" type="text" placeholder="DD/MM/AAAA, --:--" name="start">
+							</div>
+							<div class="input-wrapper flex-1">
+								<label for="end">Fim</label>
+								<input id="end" type="text" placeholder="DD/MM/AAAA, --:--" name="end">
+							</div>
+						</div>
+						<div class="flex gap-1">
+							<div class="input-wrapper flex-1">
+								<label>Tipo</label>
+								<div class="type-selector flex">
+									<div class="type-selector-inner flex-1">
+										<div class="selector-image image-presential"></div>
+										<input type="radio" name="event-type" id="presential" value="presential" checked>
+										<label for="presential">Presencial</label>
+									</div>
+									<div class="type-selector-inner flex-1">
+										<div class="selector-image image-online"></div>
+										<input type="radio" name="event-type" id="online" value="online">
+										<label for="online">Online</label>
+									</div>
 								</div>
-								<div>
-									<label for="end">Fim</label>
-									<input id="end" type="text" placeholder="DD/MM/AAAA, --:--" name="end">
+							</div>
+							<div class="input-wrapper flex-1">
+								<label for="place">Local</label>
+								<input id="place" type="text" placeholder="Link ou endereço" name="place">
+							</div>
+						</div>
+						<div class="input-wrapper">
+							<label for="description">Descrição</label>
+							<textarea id="description" name="description" placeholder="Escreva sobre os detalhes do evento" rows="5"></textarea>
+						</div>
+					</fieldset>
+					<fieldset class="customization">
+						<div class="title-form flex">
+							<img src="assets/icons/brush.svg" alt="ícone pincel">
+							<legend>Personalização</legend>
+						</div>
+						<div class="input-wrapper">
+							<label>Cor principal</label>
+							<div class="main-color grid">
+								<div class="option-color brand-light">
+									<input type="radio" name="color" id="brand-light" value="brand-light">
+								</div>
+								<div class="option-color navy">
+									<input type="radio" name="color" id="navy" value="navy">
+								</div>
+								<div class="option-color purple">
+									<input type="radio" name="color" id="purple" value="purple">
+								</div>
+								<div class="option-color fuschia">
+									<input type="radio" name="color" id="fuschia" value="fuschia">
+								</div>
+								<div class="option-color pink">
+									<input type="radio" name="color" id="pink" value="pink">
+								</div>
+								<div class="option-color danger">
+									<input type="radio" name="color" id="danger" value="danger">
+								</div>
+								<div class="option-color orange">
+									<input type="radio" name="color" id="orange" value="orange">
+								</div>
+								<div class="option-color yellow">
+									<input type="radio" name="color" id="yellow" value="yellow">
+								</div>
+								<div class="option-color lime">
+									<input type="radio" name="color" id="lime" value="lime">
+								</div>
+								<div class="option-color green">
+									<input type="radio" name="color" id="green" value="green">
+								</div>
+								<div class="option-color cyan">
+									<input type="radio" name="color" id="cyan" value="cyan">
+								</div>
+							</div>
+						</div>
+						<div class="input-wrapper">
+							<label>Tema do evento</label>
+							<div class="event-theme grid">
+								<div class="option-theme">
+									<input type="radio" name="theme" id="birthday">
+									<img src="assets/images/aniversario.jpg" alt="festa de aniversário">
+									<label for="birthday">Aniversário</label>
+								</div>
+								<div class="option-theme">
+									<input type="radio" name="theme" id="child">
+									<img src="assets/images/infantil.jpg" alt="festa infantil">
+									<label for="child">Infantil</label>
+								</div>
+								<div class="option-theme">
+									<input type="radio" name="theme" id="graduation">
+									<img src="assets/images/formatura.jpg" alt="festa de formatura">
+									<label for="graduation">Formatura</label>
+								</div>
+								<div class="option-theme">
+									<input type="radio" name="theme" id="wedding">
+									<img src="assets/images/casamento.jpg" alt="festa de casamento">
+									<label for="wedding">Casamento</label>
+								</div>
+								<div class="option-theme">
+									<input type="radio" name="theme" id="baby-shower">
+									<img src="assets/images/cha-de-bebe.jpg" alt="chá de bebê">
+									<label for="baby-shower">Chá de bebê</label>
+								</div>
+								<div class="option-theme">
+									<input type="radio" name="theme" id="bridal-shower">
+									<img src="assets/images/cha-de-panela.jpg" alt="chá de Panela">
+									<label for="bridal-shower">Chá de Panela</label>
+								</div>
+								<div class="option-theme">
+									<input type="radio" name="theme" id="carnival">
+									<img src="assets/images/infantil.jpg" alt="carnaval">
+									<label for="carnival">Carnaval</label>
+								</div>
+								<div class="option-theme">
+									<input type="radio" name="theme" id="easter">
+									<img src="assets/images/pascoa.jpg" alt="páscoa">
+									<label for="easter">Páscoa</label>
+								</div>
+								<div class="option-theme">
+									<input type="radio" name="theme" id="saint-john">
+									<img src="assets/images/sao-joao.jpg" alt="são joão">
+									<label for="saint-john">São João</label>
+								</div>
+								<div class="option-theme">
+									<input type="radio" name="theme" id="halloween">
+									<img src="assets/images/halloween.jpg" alt="halloween">
+									<label for="child">Halloween</label>
+								</div>
+								<div class="option-theme">
+									<input type="radio" name="theme" id="christmas">
+									<img src="assets/images/natal.jpg" alt="natal">
+									<label for="christmas">Natal</label>
+								</div>
+								<div class="option-theme">
+									<input type="radio" name="theme" id="other">
+									<img src="assets/images/outro.jpg" alt="outras festas">
+									<label for="other">Outro</label>
+								</div>
+							</div>
+						</div>
+						<div class="flex">
+							<div class="input-wrapper flex-1">
+								<label>Estilo</label>
+								<div class="style-wrapper flex center gap-1">
+								<label class="switch">
+									<input type="checkbox">
+									<span class="slider round"></span>
+								</label>
+									<label for="style">Escuro</label>
+								</div>
+							</div>
+							<div class="input-wrapper flex-2">
+								<label>Foto de Capa</label>
+								<div class="cover-photo">
+									<input type="file" name="cover-photo" id="cover-photo">
 								</div>
 							</div>
 						</div>
 					</fieldset>
+					<fieldset class="contact">
+						<div class="title-form flex">
+							<img src="assets/icons/profile.svg" alt="ícone perfil">
+							<legend>Dados para contato</legend>
+						</div>
+						<div class="input-wrapper">
+							<label for="title">Nome</label>
+							<input id="name" type="text" placeholder="Nome completo" name="name" required>
+							<div class="error">
+								<img src="assets/icons/circle-alert.png" alt="ícone atenção">
+								<span>Campo obrigatório</span>
+							</div>
+						</div>
+						<div class="flex gap-1">
+							<div class="input-wrapper flex-1">
+								<label for="email">E-mail</label>
+								<input id="email" type="email" placeholder="exemplo@email.com" name="email">
+							</div>
+							<div class="input-wrapper flex-1">
+								<label for="phone">Telefone</label>
+								<input id="phone" type="tel" placeholder="(99) 99999-9999" name="phone">
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="disclousure">
+						<div class="checkbox-disclousure flex gap-1">
+							<div class="checkbox-image"></div>
+							<input id="terms" type="checkbox" name="terms">
+							<label for="terms">Li e concordo com os <a href="#">Termos e Condições</a> e com a <a href="#">Política de Privacidade</a></label>
+						</div>
+						<div class="checkbox-disclousure flex gap-1">
+							<div class="checkbox-image"></div>
+							<input id="allow-email" type="checkbox" name="allow-email">
+							<label for="allow-email">Aceito receber atualizações e promoções por e-mail</label>
+						</div>
+						<div class="checkbox-disclousure flex gap-1">
+							<div class="checkbox-image"></div>
+							<input id="allow-sms" type="checkbox" name="allow-sms">
+							<label for="allow-sms">Aceito receber atualizações e promoções por SMS</label>
+						</div>
+					</fieldset>
+					<div class="action-wrapper flex">
+						<button class="btn-confirm" type="button"><span>Gerar convite</span></button>
+					</div>
 				</form>
 			</div>
 		</main>

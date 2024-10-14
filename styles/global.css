@@ -49,7 +49,21 @@ img {
 	--logo: 400 2.5rem var(--leckerli);
 }
 
+/* Boby */
 body {
 	background-color: var(--shape-background);
 	overflow: hidden;
+	color: var(--text-heading);
+	font: var(--body-md-400);
+}
+
+/* Typology */
+
+h1 {
+	font: var(--logo);
+	color: var(--pink)
+}
+h2 {
+	font: var(--heading-md);
+	color: var(--text-heading);
 }
